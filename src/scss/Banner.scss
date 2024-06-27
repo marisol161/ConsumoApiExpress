@@ -1,0 +1,88 @@
+.banner {
+    width: 90%; /* Ancho reducido para pantallas pequeñas */
+    background-color: lighten(#EDF2FA, 10%); /* Color como cuando está en hover */
+    padding: 20px;
+    margin: 0 auto;
+    border-radius: 20px;
+    color: #333; /* Cambia el color del texto a un tono oscuro */
+    font-family: var(--font-poppins);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra como en hover */
+    transition: all 0.3s ease;
+    border: 2px solid #7B5BF2; /* Cambia el borde del banner a #7B5BF2 */
+
+    &__header {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+
+    &__content {
+        font-size: 1rem;
+        margin-top: 10px;
+        max-width: 100%; /* Asegura que el contenido no sobrepase el ancho del banner */
+        margin: 0 auto; /* Centra el contenido */
+        display: flex;
+        flex-direction: column;
+
+        .profile-entry {
+            display: flex;
+            align-items: center;
+            justify-content: space-between; /* Asegura que los elementos estén bien espaciados */
+            margin-bottom: 10px;
+
+            span {
+                margin-left: 10px;
+                margin-right: 10px; /* Reduce el espacio entre el span y el botón */
+                flex-grow: 1;
+                color: #333; /* Asegura que el texto de los perfiles también sea oscuro */
+            }
+
+            button {
+                margin-left: 0px; /* Ajusta el margen del botón para reducir el espacio */
+            }
+        }
+    }
+
+    &__footer {
+        margin-top: 20px;
+        text-align: right;
+    }
+
+    &:hover {
+        background-color: lighten(#EDF2FA, 20%); /* Aumenta el efecto en hover */
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    @media (min-width: 540px) {
+        width: 95%; /* Ancho reducido para pantallas pequeñas */
+        &__content {
+            max-width: 90%; /* Ajusta el ancho máximo del contenido para pantallas pequeñas */
+        }
+    }
+
+    @media (min-width: 720px) {
+        width: 90%; /* Ancho reducido para pantallas medianas */
+        &__content {
+            max-width: 85%; /* Ajusta el ancho máximo del contenido para pantallas medianas */
+        }
+    }
+
+    @media (min-width: 960px) {
+        width: 90%; /* Ancho reducido para pantallas grandes */
+        &__content {
+            max-width: 80%; /* Ajusta el ancho máximo del contenido para pantallas grandes */
+        }
+    }
+
+    @media (min-width: 1140px) {
+        width: 90%; /* Ancho reducido para pantallas muy grandes */
+        &__content {
+            max-width: 80%; /* Ajusta el ancho máximo del contenido para pantallas muy grandes */
+        }
+    }
+    @media (min-width: 1320px) {
+        width: 80%; /* Ancho reducido para pantallas muy grandes */
+        &__content {
+            max-width: 70%; /* Ajusta el ancho máximo del contenido para pantallas muy grandes */
+        }
+    }
+}

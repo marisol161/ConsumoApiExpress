@@ -1,0 +1,12 @@
+.profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .profile-image {
+        border-radius: 50%; // Hacer la imagen circular
+        width: 50px; // Ajusta el tamaño de la imagen según sea necesario
+        height: 50px; // Ajusta el tamaño de la imagen según sea necesario
+        object-fit: cover; // Asegura que la imagen se ajuste bien dentro del contenedor circular
+    }
+}

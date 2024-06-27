@@ -1,0 +1,28 @@
+.small-banner {
+    background-color: #F4F8FF; /* Fondo más claro */
+    color: black; /* Texto negro para mejor visibilidad */
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    position: relative;
+    top: -10px;
+    margin: 0 auto 10px auto;
+    width: 60%; /* Banner más angosto */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra como en hover */
+
+    h2, h3 {
+        margin: 0;
+        font-family: var(--font-poppins); // Asegúrate de definir esta variable en _variables.scss
+    }
+
+    h2 {
+        font-size: 1.25rem;
+        color: #7B5BF2; /* Color morado */
+    }
+
+    h3 {
+        font-size: 1rem;
+        margin-top: 5px;
+        color: black; /* Color negro */
+    }
+}

@@ -1,0 +1,175 @@
+.banner {
+    width: 90%; /* Ancho reducido para pantallas pequeñas */
+    background-color: lighten(#EDF2FA, 10%); /* Color como cuando está en hover */
+    padding: 20px;
+    margin: 0 auto;
+    border-radius: 10px;
+    color: #333; /* Cambia el color del texto a un tono oscuro */
+    font-family: var(--font-poppins);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra como en hover */
+    transition: all 0.3s ease;
+    border: 2px solid #7B5BF2; /* Cambia el borde del banner a #7B5BF2 */
+  
+    &__header {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+  
+    &__content {
+      font-size: 1rem;
+      margin-top: 10px;
+      max-width: 100%; /* Asegura que el contenido no sobrepase el ancho del banner */
+      margin: 0 auto; /* Centra el contenido */
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* Alinea el contenido al centro */
+  
+      .profile-entries {
+        display: flex;
+        justify-content: center; /* Centra las imágenes de perfil en una fila */
+        flex-wrap: wrap; /* Hace que las imágenes se ajusten en una nueva línea si es necesario */
+        margin-bottom: 10px;
+  
+        .profile-entry {
+          display: flex;
+          flex-direction: column;
+          align-items: center; /* Alinea las imágenes y los nombres al centro */
+          margin: 10px; /* Espacio entre los perfiles */
+  
+          img {
+            width: 100px; /* Ajusta el tamaño de las imágenes de perfil */
+            height: 100px; /* Ajusta el tamaño de las imágenes de perfil */
+            border-radius: 50%; /* Hace las imágenes redondas */
+          }
+  
+          span:first-of-type {
+            margin-top: 10px;
+            font-size: 1.5rem; /* Ajusta el tamaño de la fuente de los nombres */
+            color: #7B5BF2; /* Color para el primer span */
+            text-align: center; /* Alinea el texto al centro */
+          }
+  
+          span:nth-of-type(2) {
+            margin-top: 5px; /* Ajusta el margen superior */
+            font-size: 1rem; /* Ajusta el tamaño de la fuente */
+            color: #2F2E2E; /* Color para el segundo span */
+            text-align: center; /* Alinea el texto al centro */
+          }
+        }
+  
+        .friendship-icon {
+          margin: 10px; /* Ajusta el margen alrededor del ícono */
+          text-align: center; /* Alinea el ícono al centro */
+  
+          img {
+            width: 80px; /* Tamaño del ícono */
+            height: auto; /* Altura automática para mantener la proporción */
+          }
+        }
+      }
+  
+      .relationship-info {
+        text-align: center; /* Centra el texto de la relación */
+        font-size: 1.3rem; /* Ajusta el tamaño de la fuente */
+        color: #000; /* Cambia el color del texto a negro */
+        margin-top: 20px; /* Ajusta el margen superior */
+      }
+    }
+  
+    &__footer {
+      margin-top: 20px;
+      text-align: right;
+    }
+  
+    &:hover {
+      background-color: lighten(#EDF2FA, 20%); /* Aumenta el efecto en hover */
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+  
+    @media (min-width: 540px) {
+      width: 95%; /* Ancho reducido para pantallas pequeñas */
+      &__content {
+        max-width: 90%; /* Ajusta el ancho máximo del contenido para pantallas pequeñas */
+        flex-direction: column;
+        align-items: center;
+        .profile-entries {
+          flex-direction: column;
+          .profile-entry, .friendship-icon {
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+  
+    @media (min-width: 720px) {
+      width: 90%; /* Ancho reducido para pantallas medianas */
+      &__content {
+        max-width: 85%; /* Ajusta el ancho máximo del contenido para pantallas medianas */
+        flex-direction: column;
+        align-items: center;
+        .profile-entries {
+          flex-direction: column;
+          .profile-entry, .friendship-icon {
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+  
+    @media (min-width: 960px) {
+      width: 90%; /* Ancho reducido para pantallas grandes */
+      &__content {
+        max-width: 90%; /* Ajusta el ancho máximo del contenido para pantallas grandes */
+        flex-direction: column;
+        justify-content: center;
+        .profile-entries {
+          flex-direction: column;
+          .profile-entry, .friendship-icon {
+            margin: 10px;
+          }
+        }
+      }
+    }
+  
+    @media (min-width: 1140px) {
+      width: 70%; /* Ancho reducido para pantallas muy grandes */
+      &__content {
+        max-width: 80%; /* Ajusta el ancho máximo del contenido para pantallas muy grandes */
+        justify-content: center;
+        .profile-entries {
+          flex-direction: row;
+          .profile-entry, .friendship-icon {
+            margin: 10px;
+          }
+        }
+      }
+    }
+  
+    @media (min-width0      : 1320px) {
+        width: 70%; /* Ancho reducido para pantallas muy grandes */
+        &__content {
+          max-width: 80%; /* Ajusta el ancho máximo del contenido para pantallas muy grandes */
+          justify-content: center;
+          .profile-entries {
+            flex-direction: row;
+            .profile-entry, .friendship-icon {
+              margin: 10px;
+            }
+          }
+        }
+      }
+}
+  
+.profile-button-container {
+    display: flex;
+    justify-content: center; /* Centra el botón fuera del banner */
+    margin-top: 20px;
+}
+  
+.profile-button-container a {
+    margin: 0 10px; /* Espacio entre los botones */
+    img {
+        width: 40px; /* Tamaño de los botones */
+        height: auto; /* Mantener proporción */
+    }
+}
